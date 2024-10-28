@@ -10,7 +10,7 @@
       "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/smart-list-host",
+        "outputPath": "dist/smart-list-host",
         "index": "apps/smart-list-host/src/index.html",
         "main": "apps/smart-list-host/src/main.ts",
         "polyfills": ["zone.js"],

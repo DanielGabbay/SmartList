@@ -5,7 +5,10 @@
   "scripts": {
     "serve": "npm run serve:host & npm run serve:main",
     "serve:host": "nx run SmartListHost:serve",
-    "serve:main": "nx run SmartListMain:serve"
+    "serve:main": "nx run SmartListMain:serve",
+    "build": "npm run build:host & npm run build:main",
+    "build:host": "nx run SmartListHost:build --skip-nx-cache",
+    "build:main": "nx run SmartListMain:build --skip-nx-cache"
   },
   "private": true,
   "dependencies": {
