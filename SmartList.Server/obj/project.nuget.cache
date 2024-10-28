@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xxQ/IcCByyA=",
+  "dgSpecHash": "i2MMPWoPam0=",
   "success": true,
-  "projectFilePath": "/Users/danielgabbay/Work/DocReader/Repos/ארכיון/SmartList/SmartList.Server/SmartList.Server.csproj",
+  "projectFilePath": "/Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/SmartList.Server.csproj",
   "expectedPackageFiles": [
     "/Users/danielgabbay/.nuget/packages/microsoft.aspnetcore.spaproxy/8.0.10/microsoft.aspnetcore.spaproxy.8.0.10.nupkg.sha512",
     "/Users/danielgabbay/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

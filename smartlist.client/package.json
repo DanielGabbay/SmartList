@@ -3,12 +3,15 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "npmi": "npm install --force",
     "serve": "npm run serve:host & npm run serve:main",
     "serve:host": "nx run SmartListHost:serve",
     "serve:main": "nx run SmartListMain:serve",
     "build": "npm run build:host & npm run build:main",
     "build:host": "nx run SmartListHost:build --skip-nx-cache",
-    "build:main": "nx run SmartListMain:build --skip-nx-cache"
+    "build:main": "nx run SmartListMain:build --skip-nx-cache",
+    "-------------- Start --------------------": "",
+    "start": "npm run npmi && node scripts/start --hostApp=SmartListHost --devRemotes=SmartListMain --debug=false"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +28,7 @@
     "@nx/angular": "20.0.6"
   },
   "devDependencies": {
+    "run-script-os": "*",
     "@angular-devkit/build-angular": "~18.2.0",
     "@angular-devkit/core": "~18.2.0",
     "@angular-devkit/schematics": "~18.2.0",

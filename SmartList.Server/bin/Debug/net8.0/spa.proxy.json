@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:4200",
 "RedirectUrl": "",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "/Users/danielgabbay/Work/DocReader/Repos/ארכיון/SmartList/SmartList.Server/../smartlist.client",
+"WorkingDirectory": "/Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/../smartlist.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

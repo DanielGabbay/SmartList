@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/danielgabbay/Work/DocReader/Repos/ארכיון/SmartList/SmartList.Server/SmartList.Server.csproj": {}
+    "/Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/SmartList.Server.csproj": {}
   },
   "projects": {
-    "/Users/danielgabbay/Work/DocReader/Repos/ארכיון/SmartList/SmartList.Server/SmartList.Server.csproj": {
+    "/Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/SmartList.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/danielgabbay/Work/DocReader/Repos/ארכיון/SmartList/SmartList.Server/SmartList.Server.csproj",
+        "projectUniqueName": "/Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/SmartList.Server.csproj",
         "projectName": "SmartList.Server",
-        "projectPath": "/Users/danielgabbay/Work/DocReader/Repos/ארכיון/SmartList/SmartList.Server/SmartList.Server.csproj",
+        "projectPath": "/Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/SmartList.Server.csproj",
         "packagesPath": "/Users/danielgabbay/.nuget/packages/",
-        "outputPath": "/Users/danielgabbay/Work/DocReader/Repos/ארכיון/SmartList/SmartList.Server/obj/",
+        "outputPath": "/Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/danielgabbay/.nuget/NuGet/NuGet.Config"

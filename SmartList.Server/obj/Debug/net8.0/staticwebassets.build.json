@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "JuZTX2FSv7OiATDUQG7CzXH9QBmmjTKD/29gmceVI9k=",
+  "Hash": "g3RdEzTZZ6+RQGlhcodCNqloCEh+H5gWKUjAcVzPeeU=",
   "Source": "SmartList.Server",
   "BasePath": "_content/SmartList.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "/Users/danielgabbay/Work/DocReader/Repos/ארכיון/SmartList/smartlist.client/smartlist.client.esproj",
+      "Identity": "/Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/smartlist.client/smartlist.client.esproj",
       "Version": 2,
       "Source": "smartlist.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
@@ -18,6 +18,14 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SmartList.Server/wwwroot",
+      "Source": "SmartList.Server",
+      "ContentRoot": "/Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/wwwroot/",
+      "BasePath": "_content/SmartList.Server",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
