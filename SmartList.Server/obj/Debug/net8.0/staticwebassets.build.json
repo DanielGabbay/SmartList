@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "g3RdEzTZZ6+RQGlhcodCNqloCEh+H5gWKUjAcVzPeeU=",
+  "Hash": "UmgdEOa1efHPszmc82xtQeIjYwx3KbD8B5nh8WRWvCk=",
   "Source": "SmartList.Server",
   "BasePath": "_content/SmartList.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "smartlist.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],

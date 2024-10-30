@@ -7,3 +7,17 @@ The following steps were used to generate this project:
 - Add `dockerfile` to set up docker build.
 - Add project to the startup projects list.
 - Write this file.
+
+
+# https://freeasphosting.net/
+
+# migration commands:
+```
+dotnet ef migrations add <migration-name>
+dotnet ef database update
+```
+
+## to remove migration:
+```
+dotnet ef migrations remove
+```
