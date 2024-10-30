@@ -1,0 +1,23 @@
+:host {
+  @apply flex flex-col h-full w-full overflow-hidden gap-1;
+}
+
+nav {
+  @apply top-2 left-2 w-full flex justify-center;
+  li {
+    @apply inline-block p-1
+    text-center px-2 rounded;
+    border: 1px solid #ccc;
+  }
+}
+
+main {
+  @apply block w-full h-full overflow-auto
+  border-2 border-gray-500 rounded-lg;
+
+
+  ::ng-deep router-outlet + * {
+    @apply block w-full h-full;
+  }
+}
+
