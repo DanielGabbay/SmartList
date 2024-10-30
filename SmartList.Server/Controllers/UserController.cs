@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using SmartList.Server.Services;
 using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using SmartList.Server.Data.Enums;
 
 namespace SmartList.Server.Controllers
 {
@@ -17,8 +19,10 @@ namespace SmartList.Server.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> CreateUser(string username, string password, Guid createdById)
+        [Authorize(Roles = Role.Admin)]
+        public async Task<IActionResult> CreateUser(string username, string password)
         {
+            var createdById = Guid.Parse(User.Identity.Name); // TODO: edit
             var result = await _userService.CreateUserAsync(username, password, createdById);
             if (result.Succeeded)
             {
