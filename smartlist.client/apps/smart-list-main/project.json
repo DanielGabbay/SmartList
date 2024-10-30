@@ -10,7 +10,8 @@
       "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/smart-list-host/main",
+        "baseHref": "/main/",
+        "outputPath": "dist/main",
         "index": "apps/smart-list-main/src/index.html",
         "main": "apps/smart-list-main/src/main.ts",
         "polyfills": ["zone.js"],
@@ -30,6 +31,11 @@
       },
       "configurations": {
         "production": {
+          "outputHashing": "all",
+          "optimization": true,
+          "sourceMap": true,
+          "namedChunks": true,
+          "extractLicenses": true,
           "budgets": [
             {
               "type": "initial",
@@ -42,7 +48,6 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all",
           "customWebpackConfig": {
             "path": "apps/smart-list-main/webpack.prod.config.ts"
           }

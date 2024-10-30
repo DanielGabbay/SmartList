@@ -51,21 +51,42 @@ var app = builder.Build();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Add special handling for /main path
+app.MapWhen(context => context.Request.Path.StartsWithSegments("/main"), mainApp =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    mainApp.UseStaticFiles();
+    mainApp.UseRouting();
+    mainApp.UseAuthentication();
+    mainApp.UseAuthorization();
+    
+    mainApp.Use(async (context, next) =>
+    {
+        if (!context.Request.Path.Value.Contains('.'))
+        {
+            context.Request.Path = "/main/index.html";
+        }
+        await next();
+    });
 
-app.UseHttpsRedirection();
+    // Add endpoints middleware and fallback for main app
+    mainApp.UseEndpoints(endpoints =>
+    {
+        endpoints.MapFallback(context =>
+        {
+            context.Request.Path = "/main/index.html";
+            return context.Response.SendFileAsync(Path.Combine(app.Environment.WebRootPath, "main", "index.html"));
+        });
+    });
+});
 
+// Regular routes and middleware for the host app
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
+// Default SPA fallback for the host app
 app.MapFallbackToFile("/index.html");
-
 
 app.Run();

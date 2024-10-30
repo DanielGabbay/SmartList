@@ -1,12 +1,8 @@
-# See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-# This stage is used when running from VS in fast mode (Default for Debug configuration)
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
-
 
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS with-node
@@ -15,6 +11,7 @@ RUN apt-get install curl
 RUN curl -sL https://deb.nodesource.com/setup_20.x | bash
 RUN apt-get -y install nodejs
 RUN npm install -g @angular/cli
+RUN npm install -g nx@latest
 
 FROM with-node AS build
 ARG BUILD_CONFIGURATION=Release
@@ -31,8 +28,19 @@ FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./SmartList.Server.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
+# Client build
+FROM with-node AS client-build
+WORKDIR /src
+COPY ["smartlist.client/", "/src/smartlist.client/"]
+WORKDIR /src/smartlist.client
+RUN npm install --force
+RUN npm run build
+
+# Copy client dist folder to the final stage
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY --from=client-build /src/smartlist.client/dist/main ./wwwroot/main
+COPY --from=client-build /src/smartlist.client/dist ./wwwroot
 ENTRYPOINT ["dotnet", "SmartList.Server.dll"]

@@ -12,7 +12,7 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/smart-list-host",
+        "outputPath": "dist/",
         "index": "apps/smart-list-host/src/index.html",
         "main": "apps/smart-list-host/src/main.ts",
         "polyfills": [
@@ -23,7 +23,18 @@
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/smart-list-host/public"
+            "input": "apps/smart-list-host/public",
+            "output": "/"
+          },
+          {
+            "glob": "module-federation.manifest.json",
+            "input": "apps/smart-list-host/public",
+            "output": "/"
+          },
+          {
+            "glob": "module-federation.manifest.prod.json",
+            "input": "apps/smart-list-host/public",
+            "output": "/"
           }
         ],
         "styles": [
@@ -36,6 +47,11 @@
       },
       "configurations": {
         "production": {
+          "outputHashing": "all",
+          "optimization": true,
+          "sourceMap": true,
+          "namedChunks": true,
+          "extractLicenses": true,
           "budgets": [
             {
               "type": "initial",
@@ -47,8 +63,7 @@
               "maximumWarning": "2kb",
               "maximumError": "4kb"
             }
-          ],
-          "outputHashing": "all"
+          ]
         },
         "development": {
           "buildOptimizer": false,

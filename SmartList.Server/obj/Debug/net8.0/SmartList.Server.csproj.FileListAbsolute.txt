@@ -193,3 +193,4 @@
 /Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
 /Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/Users/danielgabbay/Work/DocReader/Repos/archive/SmartList/SmartList.Server/obj/Debug/net8.0/SmartList.Server.sourcelink.json
