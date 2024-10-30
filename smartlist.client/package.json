@@ -4,9 +4,12 @@
   "license": "MIT",
   "scripts": {
     "npmi": "npm install --force",
+    "graph": "npx nx graph --watch",
+    "-------------- Serve --------------------": "",
     "serve": "npm run serve:host & npm run serve:main",
     "serve:host": "nx run SmartListHost:serve",
     "serve:main": "nx run SmartListMain:serve",
+    "-------------- Build --------------------": "",
     "build": "npm run build:host & npm run build:main",
     "build:host": "nx run SmartListHost:build --skip-nx-cache",
     "build:main": "nx run SmartListMain:build --skip-nx-cache",
