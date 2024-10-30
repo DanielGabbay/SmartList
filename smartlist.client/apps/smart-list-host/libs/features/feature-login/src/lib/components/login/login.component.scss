@@ -1,0 +1,7 @@
+div {
+  @apply bg-[ghostwhite] border-solid border border-[silver] p-1 rounded-[4px] w-[25%] overflow-hidden;
+
+  code {
+    @apply block overflow-auto whitespace-pre;
+  }
+}

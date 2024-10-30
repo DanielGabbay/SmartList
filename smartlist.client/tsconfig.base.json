@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
+    "strict": false,
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
@@ -15,6 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@core": ["libs/core/src/index.ts"],
       "@feature-login": [
         "apps/smart-list-host/libs/features/feature-login/src/index.ts"
       ],

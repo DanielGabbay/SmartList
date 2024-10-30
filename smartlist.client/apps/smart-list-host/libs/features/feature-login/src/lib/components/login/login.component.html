@@ -1,1 +1,9 @@
 <p>login works!</p>
+
+<p-button label="Login" (onClick)="login()"></p-button>
+
+<div>
+@if (loginResponse()) {
+  <code [innerHTML]="formattedJsonResponse()"></code>
+}
+</div>
