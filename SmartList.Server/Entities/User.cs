@@ -30,8 +30,8 @@ public class User : IdentityUser<Guid>, IAuditable
     }
 }
 
-public class UserRole : IdentityUserRole<Guid>
+public sealed class UserRole : IdentityUserRole<Guid>
 {
-    public virtual User User { get; set; }
-    public virtual IdentityRole<Guid> Role { get; set; } = new();
+    public required User User { get; set; }
+    public IdentityRole<Guid> Role { get; set; } = new();
 }

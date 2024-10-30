@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SmartList.Server.Data.Contexts;
 using SmartList.Server.Entities;
+using SmartList.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddIdentity<User, IdentityRole<Guid>>().AddEntityFrameworkStore
 
 // Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddScoped<UserService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -37,5 +40,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapFallbackToFile("/index.html");
+
 
 app.Run();

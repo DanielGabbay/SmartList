@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartList.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d813c2b5e2b575a5f5c1cc001a3c11b9bf851abb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd61cf237dedb6ebfa658f3e6243c8c868be3dac")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartList.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartList.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
